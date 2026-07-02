@@ -2,6 +2,7 @@ import AnimatedLayout from '../components/layout/AnimatedLayout/AnimatedLayout';
 
 import App from '../App';
 import ErrorPage from '../components/pages/ErrorPage/ErrorPage';
+import ProjectsPages from '../components/pages/ProjectsPages/ProjectsPages';
 
 const routes = [
     {
@@ -12,11 +13,11 @@ const routes = [
                 element: <App />,
                 errorElement: <ErrorPage />,
             },
-            // {
-            //     path: '/test',
-            //     element: <ProjectCard />,
-            //     // errorElement: <ErrorPage />,
-            // },
+            {
+                path: '/projects',
+                element: <ProjectsPages />,
+                errorElement: <ErrorPage />,
+            },
             {
                 // path: '/profile/:name?',
                 // element: <Profile />,

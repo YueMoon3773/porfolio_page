@@ -30,10 +30,11 @@ const App = () => {
                     <LinkBtnLike
                         toDestination={'/profile'}
                         linkBtnClassName={'exploreMoreHomeBtn'}
-                        linkBtnContent={'Get to know me ☺️'}
                         isOpenInNewTab={false}
                         isDisplayArrowIcon={true}
-                    ></LinkBtnLike>
+                    >
+                        Get to know me ☺️
+                    </LinkBtnLike>
 
                     <p className="btmText">
                         Never mind -{' '}
@@ -45,18 +46,6 @@ const App = () => {
                             Just come to say hi{isBtmLinkHover && <span> 😉</span>}
                         </Link>
                     </p>
-
-                    {/* <p
-                        className="my-button"
-                        onMouseEnter={() => popoverRef.current?.showPopover()}
-                        onMouseLeave={() => popoverRef.current?.hidePopover()}
-                    >
-                        Hover me
-
-                        <div ref={popoverRef} popover="manual" className="tooltip">
-                            Hello!
-                        </div>
-                    </p> */}
                 </motion.div>
             </div>
         </PageLayout>

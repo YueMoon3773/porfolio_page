@@ -3,6 +3,10 @@
     min-height: 100vh;
     height: 100%;
     position: relative;
+
+    &.normalPage {
+        padding: 4.2rem 0;
+    }
 }
 
 .canvasBgWrapper {

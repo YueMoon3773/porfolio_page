@@ -64,17 +64,24 @@ $transition_effect_md: all 360ms ease-in-out;
 /* =============================================== */
 /* PAGE CUSTOM SET UP  */
 /* =============================================== */
+$web_bg_color: #121415;
+$scroll_bar_width: 6px;
+$scroll_bar_border_radius: 8px;
+
 $side_bar_border_color: linear-gradient(
     45deg,
-    #d2000e 0%,
-    #ff192885 15%,
-    #ff192826 30%,
+    #d2000e 15%,
+    #ff192885 20%,
+    #ff192836 25%,
     #ff7c8500 50%,
-    #ff192826 70%,
-    #ff192885 85%,
-    #d2000e 100%
+    #ff192836 75%,
+    #ff192885 80%,
+    #d2000e 85%
 );
 $side_bar_tooltip_bg_color: #40434b;
+
+$carousel_btn_bg_color: #0000008d;
+$carousel_navigate_width_height: 10px;
 
 /* =============================================== */
 /* THEME SET UP  */

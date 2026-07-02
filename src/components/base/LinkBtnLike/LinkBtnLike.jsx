@@ -10,12 +10,12 @@ import './LinkBtnLike.scss';
 const linkBtnSchema = z.object({
     toDestination: z.string(),
     linkBtnClassName: z.string(),
-    linkBtnContent: z.string(),
     isOpenInNewTab: z.boolean().default(false),
     isDisplayArrowIcon: z.boolean().default(false),
+    children: z.unknown(),
 });
 
-const LinkBtnLike = ({ toDestination, linkBtnClassName, linkBtnContent, isOpenInNewTab, isDisplayArrowIcon }) => {
+const LinkBtnLike = ({ toDestination, linkBtnClassName, isOpenInNewTab, isDisplayArrowIcon, children }) => {
     return (
         <Link
             className={`linkBtnBaseStyle ${linkBtnClassName}`}
@@ -23,10 +23,14 @@ const LinkBtnLike = ({ toDestination, linkBtnClassName, linkBtnContent, isOpenIn
             target={isOpenInNewTab ? '_blank' : undefined}
             rel={isOpenInNewTab ? 'noopener noreferrer' : undefined}
         >
-            {linkBtnContent}
             {isDisplayArrowIcon && (
-                <div className="arrowIconWrapper">
+                <div className="arrowIconWrapper left">
                     <ArrowRightIcons></ArrowRightIcons>
+                </div>
+            )}
+            {children}
+            {isDisplayArrowIcon && (
+                <div className="arrowIconWrapper right">
                     <ArrowRightIcons></ArrowRightIcons>
                 </div>
             )}

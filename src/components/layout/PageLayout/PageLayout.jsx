@@ -164,7 +164,7 @@ const PageLayout = ({ pageType = 'normalPage', sideBarDelayMotion = 0.36, childr
     }, [pageType]);
 
     return (
-        <div className="layoutWrapper">
+        <div className={`layoutWrapper ${pageType}`}>
             {(pageType === 'homePage' || pageType === 'errorPage') && (
                 <div ref={canvasBgWrapperRef} className="canvasBgWrapper">
                     <Canvas ref={canvasApiRef} drawFn={drawFn}></Canvas>

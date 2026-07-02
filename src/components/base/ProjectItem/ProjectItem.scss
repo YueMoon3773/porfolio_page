@@ -1,0 +1,74 @@
+h2,
+h3,
+h4,
+p {
+    color: $white_text;
+}
+
+.projectItemWrapper {
+    width: 100%;
+
+    @include flexColumn;
+    align-items: stretch;
+    gap: clamp(16px, 1.8rem, 24px);
+}
+
+.projectItemHeadingWrapper {
+    .projectItemHeading {
+        font-size: $fs_heading_md;
+    }
+
+    .projectItemSubHeading {
+        font-size: $fs_normal_lg;
+        color: color-mix(in srgb, $snow_white_color 100%, transparent 20%);
+    }
+}
+
+.projectItemImages {
+    width: 100%;
+}
+
+.projectItemTechnologies,
+.projectItemSummary {
+    @include flexColumn;
+    align-items: stretch;
+    gap: clamp(6px, 0.6em, 10px);
+}
+
+.projectItemSmallHeading {
+    font-size: $fs_normal_xl;
+}
+
+.projectItemText {
+    font-size: $fs_normal_md;
+    line-height: 1.6;
+}
+
+.projectItemBottomBtns {
+    align-self: center;
+    width: 50%;
+
+    @include flexCenter;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: clamp(20px, 2.4rem, 32px);
+    margin-top: 2.4em;
+
+    .projectBottomBtn {
+        flex: 1;
+        font-size: $fs_normal_md;
+        border: 2px solid transparent;
+
+        svg.gitHubIcon {
+            font-size: 1rem;
+            color: $white_text;
+            fill: currentColor;
+            height: $fs_heading_3sm;
+            margin-right: 0.6em;
+        }
+
+        &:hover {
+            border-color: $primary_color;
+        }
+    }
+}
