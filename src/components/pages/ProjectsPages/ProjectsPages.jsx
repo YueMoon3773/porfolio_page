@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 import {
     gamioImages,
@@ -16,10 +16,6 @@ import FadeUpWrapper from '../../layout/FadeUpWrapper/FadeUpWrapper';
 import './ProjectsPages.scss';
 
 const ProjectsPages = () => {
-    useEffect(() => {
-        window.scrollTo({ top: 0, left: 0 });
-    }, []);
-
     return (
         <PageLayout pageType={'normalPage'}>
             <div className="projectsPageWrapper">

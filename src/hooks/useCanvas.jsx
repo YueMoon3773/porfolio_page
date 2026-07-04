@@ -33,7 +33,7 @@ const useCanvas = (drawFn) => {
             CanvasRef.current.width = canvasWidth;
             CanvasRef.current.height = canvasHeight;
 
-            // return
+            // return;
         }
     };
 

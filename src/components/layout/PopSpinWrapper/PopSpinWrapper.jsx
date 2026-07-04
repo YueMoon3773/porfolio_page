@@ -20,8 +20,9 @@ const PopSpinWrapper = ({ delay = 0, duration = 1.6, className, children }) => {
         <motion.div
             className={className}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }} // triggers one time, when 10% of element is visible
+            // whileInView="visible"
+            animate="visible"
+            viewport={{ once: true, amount: 0.16 }} // triggers one time, when 10% of element is visible
             variants={popSpinVariants}
             transition={{
                 delay,
@@ -30,8 +31,8 @@ const PopSpinWrapper = ({ delay = 0, duration = 1.6, className, children }) => {
                 // "type: spring" with these values gives the little overshoot/bounce —
                 // this is what makes it feel like a "pop" instead of a flat scale-up
                 type: 'spring',
-                stiffness: 30,
-                damping: 10,
+                stiffness: 36,
+                damping: 12,
             }}
         >
             {children}

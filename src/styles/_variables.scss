@@ -83,6 +83,9 @@ $side_bar_tooltip_bg_color: #40434b;
 $carousel_btn_bg_color: #0000008d;
 $carousel_navigate_width_height: 10px;
 
+$base_border: 1px solid color-mix(in srgb, $light_gray_color 50%, transparent 100%);
+$base_border_hover: 1px solid color-mix(in srgb, $light_gray_color 90%, transparent 30%);
+
 /* =============================================== */
 /* THEME SET UP  */
 /* =============================================== */

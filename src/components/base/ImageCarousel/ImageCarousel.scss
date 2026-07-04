@@ -6,6 +6,18 @@
     z-index: 1;
     border: 3px solid $snow_white_color;
     border-radius: $distance_xl;
+
+    @media (max-width: 1024px) {
+        border-radius: $distance_lg;
+    }
+
+    @media (max-width: 768px) {
+        border-radius: $distance_md;
+    }
+
+    @media (max-width: 460px) {
+        border-radius: calc($distance_md * 0.96);
+    }
 }
 
 .imagesWrapper {
@@ -59,6 +71,14 @@
     svg {
         height: $fs_heading_xl;
         color: $white_text;
+
+        @media (max-width: 768px) {
+            height: $fs_heading_lg;
+        }
+
+        @media (max-width: 460px) {
+            height: $fs_heading_sm;
+        }
     }
 }
 
@@ -78,6 +98,18 @@
         border-radius: 999px;
         cursor: pointer;
         transition: $transition_effect_md;
+
+        @media (max-width: 1024px) {
+            width: calc($carousel_navigate_width_height * 0.96);
+        }
+
+        @media (max-width: 768px) {
+            width: calc($carousel_navigate_width_height * 0.9);
+        }
+
+        @media (max-width: 460px) {
+            width: calc($carousel_navigate_width_height * 0.76);
+        }
 
         &.active {
             background-color: $snow_white_color;

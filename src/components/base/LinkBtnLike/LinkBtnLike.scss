@@ -12,6 +12,18 @@ $svg_width: $fs_normal_xl;
     // gap: clamp(24px, 2.4rem, 32px);
     transition: $transition_effect_md;
 
+    @media (max-width: 1024px) {
+        font-size: calc($fs_normal_md * 0.96);
+    }
+
+    @media (max-width: 768px) {
+        font-size: $fs_normal_sm;
+    }
+
+    @media (max-width: 460px) {
+        font-size: $fs_normal_ssm;
+    }
+
     .arrowIconWrapper {
         @include flexCenter;
         gap: 10px;
@@ -22,11 +34,36 @@ $svg_width: $fs_normal_xl;
         position: relative;
         transition: $transition_effect_md;
 
+        @media (max-width: 1024px) {
+            width: calc($svg_width * 0.96);
+            height: $svg_width;
+        }
+
+        @media (max-width: 768px) {
+            width: calc($svg_width * 0.9);
+        }
+
+        @media (max-width: 460px) {
+            width: calc($svg_width * 0.8);
+        }
+
         svg {
             position: absolute;
             aspect-ratio: 1 / 1;
             width: $svg_width;
             transition: $transition_effect_md;
+
+            @media (max-width: 1024px) {
+                width: calc($svg_width * 0.96);
+            }
+
+            @media (max-width: 768px) {
+                width: calc($svg_width * 0.9);
+            }
+
+            @media (max-width: 460px) {
+                width: calc($svg_width * 0.8);
+            }
         }
 
         &.left {
@@ -45,6 +82,21 @@ $svg_width: $fs_normal_xl;
             & > * {
                 transform: translateX(0);
             }
+
+            @media (max-width: 1024px) {
+                width: calc($svg_width * 1.1);
+                margin-left: clamp(20px, 2.2rem, 26px);
+            }
+
+            @media (max-width: 768px) {
+                width: calc($svg_width * 0.96);
+                margin-left: clamp(16px, 1.8rem, 20px);
+            }
+
+            @media (max-width: 460px) {
+                width: calc($svg_width * 0.9);
+                margin-left: clamp(6px, 0.8rem, 10px);
+            }
         }
     }
 
@@ -56,6 +108,21 @@ $svg_width: $fs_normal_xl;
 
                 & > * {
                     transform: translateX(0);
+                }
+
+                @media (max-width: 1024px) {
+                    width: calc($svg_width * 1.1);
+                    margin-right: clamp(20px, 2.2rem, 26px);
+                }
+
+                @media (max-width: 768px) {
+                    width: calc($svg_width * 0.96);
+                    margin-right: clamp(16px, 1.8rem, 20px);
+                }
+
+                @media (max-width: 460px) {
+                    width: calc($svg_width * 0.9);
+                    margin-right: clamp(6px, 0.8rem, 10px);
                 }
             }
 

@@ -28,6 +28,18 @@
             color: $primary_color;
             font-weight: 300;
         }
+
+        @media (max-width: 1024px) {
+            font-size: calc($fs_heading_xl * 1.06);
+        }
+
+        @media (max-width: 768px) {
+            font-size: calc($fs_heading_md * 1.06);
+        }
+
+        @media (max-width: 460px) {
+            font-size: $fs_heading_ssm;
+        }
     }
 
     .exploreMoreHomeBtn {
@@ -93,6 +105,18 @@
         cursor: default;
         background: linear-gradient(90deg in oklch, $light_blue_color, $light_yellow_color);
         background-clip: text;
+
+        @media (max-width: 1024px) {
+            font-size: calc($fs_normal_ssm * 0.9);
+        }
+
+        @media (max-width: 768px) {
+            font-size: $fs_normal_3sm;
+        }
+
+        @media (max-width: 460px) {
+            font-size: $fs_normal_4sm;
+        }
 
         a {
             font-size: inherit;

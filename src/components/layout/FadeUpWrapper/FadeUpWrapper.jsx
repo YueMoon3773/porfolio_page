@@ -21,7 +21,7 @@ const FadeUpWrapper = ({ delay = 0, duration = 0.6, className, children }) => {
             className={className}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }} // triggers one time, when 10% of element is visible
+            viewport={{ once: true, amount: 0.16 }} // triggers one time, when 10% of element is visible
             variants={fadeUpVariants}
             transition={{ delay, duration, ease: [0.25, 0.1, 0.25, 1] }}
         >

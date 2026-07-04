@@ -1,7 +1,7 @@
 .profilePageWrapper {
     @include flexColumn;
     align-items: stretch;
-    gap: clamp(36px, 4rem, 48px);
+    gap: clamp(40px, 4.2rem, 48px);
 }
 
 .profileHeadingWrapper {
@@ -13,6 +13,18 @@
         color: $white_text;
         margin: 0;
         // margin: 0 auto 0.3em;
+
+        @media (max-width: 1024px) {
+            font-size: calc($fs_heading_lg * 0.96);
+        }
+
+        @media (max-width: 768px) {
+            font-size: $fs_heading_md;
+        }
+
+        @media (max-width: 460px) {
+            font-size: calc($fs_heading_md * 0.96);
+        }
     }
 }
 
@@ -20,13 +32,15 @@
     align-self: center;
     @include flexCenter;
     aspect-ratio: 5 / 4;
-    max-height: 460px;
+    max-height: 500px;
     border-radius: $distance_lg;
     overflow: hidden;
 
     .profileImg {
         width: 100%;
         height: 100%;
+        object-position: center;
+        object-fit: cover;
     }
 }
 
@@ -42,6 +56,18 @@
         color: $white_text;
         text-align: justify;
         line-height: 1.6;
+
+        @media (max-width: 1024px) {
+            font-size: calc($fs_normal_md * 0.96);
+        }
+
+        @media (max-width: 768px) {
+            font-size: $fs_normal_sm;
+        }
+
+        @media (max-width: 460px) {
+            font-size: $fs_normal_ssm;
+        }
 
         a {
             color: $blue_color;
@@ -65,15 +91,29 @@
         .profileSkillHeading {
             font-size: $fs_heading_sm;
             color: $white_text;
+
+            @media (max-width: 1024px) {
+                font-size: $fs_heading_ssm;
+            }
+
+            @media (max-width: 768px) {
+                font-size: $fs_heading_3sm;
+            }
+
+            @media (max-width: 460px) {
+                font-size: $fs_normal_xl;
+            }
         }
     }
 
     .skillsWrapper {
         @include flexCenter;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         padding: 2.4em 0;
-        border: 1px solid color-mix(in srgb, $light_gray_color 50%, transparent 100%);
+        border: $base_border;
         border-radius: $distance_md;
+        transition: border 360ms ease-in-out;
 
         .skillItem {
             @include flexColumn;
@@ -82,17 +122,41 @@
 
             svg {
                 width: $fs_heading_xl;
+
+                @media (max-width: 1024px) {
+                    width: calc($fs_heading_xl * 0.96);
+                }
+
+                @media (max-width: 768px) {
+                    width: $fs_heading_lg;
+                }
+
+                @media (max-width: 460px) {
+                    width: calc($fs_heading_sm * 0.96);
+                }
             }
 
             span {
                 font-size: $fs_normal_md;
                 color: $white_text;
                 cursor: default;
+
+                @media (max-width: 1024px) {
+                    font-size: calc($fs_normal_md * 0.96);
+                }
+
+                @media (max-width: 768px) {
+                    font-size: $fs_normal_sm;
+                }
+
+                @media (max-width: 460px) {
+                    font-size: $fs_normal_ssm;
+                }
             }
         }
-    }
-}
 
-.profileImg {
-    width: 100px;
+        &:hover {
+            border: $base_border_hover;
+        }
+    }
 }

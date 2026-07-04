@@ -16,11 +16,35 @@ p {
 .projectItemHeadingWrapper {
     .projectItemHeading {
         font-size: $fs_heading_md;
+
+        @media (max-width: 1024px) {
+            font-size: $fs_heading_sm;
+        }
+
+        @media (max-width: 768px) {
+            font-size: $fs_heading_ssm;
+        }
+
+        @media (max-width: 460px) {
+            font-size: $fs_heading_3sm;
+        }
     }
 
     .projectItemSubHeading {
         font-size: $fs_normal_lg;
         color: color-mix(in srgb, $snow_white_color 100%, transparent 20%);
+
+        @media (max-width: 1024px) {
+            font-size: $fs_normal_md;
+        }
+
+        @media (max-width: 768px) {
+            font-size: $fs_normal_sm;
+        }
+
+        @media (max-width: 460px) {
+            font-size: $fs_normal_ssm;
+        }
     }
 }
 
@@ -37,6 +61,18 @@ p {
 
 .projectItemSmallHeading {
     font-size: $fs_normal_xl;
+
+    @media (max-width: 1024px) {
+        font-size: $fs_normal_lg;
+    }
+
+    @media (max-width: 768px) {
+        font-size: calc($fs_normal_lg * 0.96);
+    }
+
+    @media (max-width: 460px) {
+        font-size: $fs_normal_md;
+    }
 }
 
 .projectItemText {
@@ -44,6 +80,18 @@ p {
     line-height: 1.6;
     text-align: justify;
     text-wrap: pretty;
+
+    @media (max-width: 1024px) {
+        font-size: calc($fs_normal_md * 0.96);
+    }
+
+    @media (max-width: 768px) {
+        font-size: $fs_normal_sm;
+    }
+
+    @media (max-width: 460px) {
+        font-size: $fs_normal_ssm;
+    }
 }
 
 .projectItemBottomBtns {
@@ -57,10 +105,38 @@ p {
     gap: clamp(20px, 2.4rem, 32px);
     margin-top: 2.4em;
 
+    @media (max-width: 1024px) {
+        width: 86%;
+    }
+
+    @media (max-width: 768px) {
+        max-width: none;
+        width: 96%;
+        margin-top: 2em;
+    }
+
+    @media (max-width: 460px) {
+        align-self: stretch;
+        width: 100%;
+        margin-top: 1.6em;
+    }
+
     .projectBottomBtn {
         flex: 1;
         font-size: $fs_normal_md;
         border: 2px solid transparent;
+
+        @media (max-width: 1024px) {
+            font-size: $fs_normal_sm;
+        }
+
+        @media (max-width: 768px) {
+            font-size: $fs_normal_ssm;
+        }
+
+        @media (max-width: 460px) {
+            font-size: $fs_normal_4sm;
+        }
 
         svg.gitHubIcon {
             font-size: 1rem;
@@ -68,6 +144,19 @@ p {
             fill: currentColor;
             height: $fs_heading_3sm;
             margin-right: 0.6em;
+
+            @media (max-width: 1024px) {
+                height: $fs_normal_xl;
+            }
+
+            @media (max-width: 768px) {
+                height: $fs_normal_lg;
+            }
+
+            @media (max-width: 460px) {
+                height: $fs_normal_md;
+                margin-right: 0.46em;
+            }
         }
 
         &:hover {

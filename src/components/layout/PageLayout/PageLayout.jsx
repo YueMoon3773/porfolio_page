@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import { z } from 'zod';
 
 import {
@@ -23,6 +23,10 @@ const pageLayoutSchema = z.object({
 });
 
 const PageLayout = ({ pageType = 'normalPage', sideBarDelayMotion = 0.36, children }) => {
+    useLayoutEffect(() => {
+        window.scrollTo({ top: 0, left: 0 });
+    }, []);
+
     const canvasBgWrapperRef = useRef(null);
     const canvasApiRef = useRef(null); // this will hold resizeCanvas func exposed by <Canvas></Canvas> when it rendered
 

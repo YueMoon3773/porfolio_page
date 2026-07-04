@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 import {
     HtmlIcon,
@@ -26,32 +26,28 @@ import ExternalLinkWithIcon from '../../base/ExternalLinkWithIcon/ExternalLinkWi
 import './ProfilePage.scss';
 
 const ProfilePage = () => {
-    useEffect(() => {
-        window.scrollTo({ top: 0, left: 0 });
-    }, []);
-
     return (
         <PageLayout pageType="normalPage">
             <div className="profilePageWrapper">
-                <PopSpinWrapper className={'profileHeadingWrapper'} delay={0} duration={1.6}>
+                <PopSpinWrapper className={'profileHeadingWrapper'} delay={0} duration={1}>
                     <h1 className="profileHeading">Hi, nice to meet you</h1>
                 </PopSpinWrapper>
 
-                <PopSpinWrapper className={'profileImgWrapper'} delay={0.6} duration={2}>
+                <PopSpinWrapper className={'profileImgWrapper'} delay={0.3} duration={1.2}>
                     <img src={profileImg} alt="Profile image" className="profileImg" />
                 </PopSpinWrapper>
 
                 <div className="profileContentWrapper">
-                    <FadeUpWrapper className={'profileTextWrapper'} delay={1.4}>
+                    <FadeUpWrapper className={'profileTextWrapper'} delay={0.36}>
                         <p className="profileText">
-                            Hello, my name is Gia Bao - a dynamic and motivated individual who is passionate about
+                            Hello, my name is Bao Nguyen - a dynamic and motivated individual who is passionate about
                             technology in general and Software Engineering in particular. The unique blending of
                             creativity, logic, technology, and endless opportunities for discovery fuels my love for web
                             development.
                         </p>
                     </FadeUpWrapper>
 
-                    <FadeUpWrapper className={'profileTextWrapper'} delay={1.6}>
+                    <FadeUpWrapper className={'profileTextWrapper'} delay={0.36}>
                         <p className="profileText">
                             I strongly believe in life-long learning and the power of hard work, and I try to bring both
                             to everything I do — whether that's building out personal projects or collaborating with
@@ -59,7 +55,7 @@ const ProfilePage = () => {
                         </p>
                     </FadeUpWrapper>
 
-                    <FadeUpWrapper className={'profileTextWrapper'} delay={0.3}>
+                    <FadeUpWrapper className={'profileTextWrapper'} delay={0.36}>
                         <p className="profileText">
                             In my previous role, I had the privilege of working alongside some genuinely talented
                             people, and together, we won bronze awards in{' '}
@@ -85,7 +81,7 @@ const ProfilePage = () => {
                         </p>
                     </FadeUpWrapper>
 
-                    <FadeUpWrapper className={'profileTextWrapper'}>
+                    <FadeUpWrapper className={'profileTextWrapper'} delay={0.16}>
                         <p className="profileText">
                             Whether you're here to check out my background, see what I've built, or just say hi, I'm
                             glad that you've stopped by. My websites are reflections of who I am and what I care about,
@@ -96,11 +92,11 @@ const ProfilePage = () => {
                 </div>
 
                 <div className="profileSkillsWrapper">
-                    <FadeUpWrapper className={'profileSkillHeadingWrapper'}>
+                    <FadeUpWrapper className={'profileSkillHeadingWrapper'} delay={0.36}>
                         <h2 className="profileSkillHeading">Skills</h2>
                     </FadeUpWrapper>
 
-                    <FadeUpWrapper className={'skillsWrapper'}>
+                    <FadeUpWrapper className={'skillsWrapper'} delay={0.36}>
                         <div className="skillItem">
                             <HtmlIcon></HtmlIcon>
                             <span>HTML</span>
@@ -127,7 +123,7 @@ const ProfilePage = () => {
                         </div>
                     </FadeUpWrapper>
 
-                    <FadeUpWrapper className={'skillsWrapper'}>
+                    <FadeUpWrapper className={'skillsWrapper'} delay={0.36}>
                         <div className="skillItem">
                             <NodeJsIcon></NodeJsIcon>
                             <span>Node JS</span>
@@ -139,7 +135,7 @@ const ProfilePage = () => {
                         </div>
                     </FadeUpWrapper>
 
-                    <FadeUpWrapper className={'skillsWrapper'}>
+                    <FadeUpWrapper className={'skillsWrapper'} delay={0.36}>
                         <div className="skillItem">
                             <GitIcon></GitIcon>
                             <span>Git</span>
@@ -156,7 +152,7 @@ const ProfilePage = () => {
                         </div>
                     </FadeUpWrapper>
 
-                    <FadeUpWrapper className={'skillsWrapper'}>
+                    <FadeUpWrapper className={'skillsWrapper'} delay={0.36}>
                         <div className="skillItem">
                             <ShellIcon></ShellIcon>
                             <span>Shell</span>

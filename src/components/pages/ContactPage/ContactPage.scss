@@ -1,0 +1,216 @@
+.contactPageWrapper {
+    height: 100%;
+    @include flexColumn;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contactPageHeadingWrapper {
+    @include flexColumn;
+    align-items: center;
+
+    .contactPageHeading {
+        font-size: $fs_heading_lg;
+        color: $white_text;
+        margin: 0 auto;
+
+        @media (max-width: 1024px) {
+            font-size: calc($fs_heading_lg * 0.96);
+        }
+
+        @media (max-width: 768px) {
+            font-size: $fs_heading_md;
+        }
+
+        @media (max-width: 460px) {
+            font-size: calc($fs_heading_md * 0.96);
+        }
+    }
+}
+
+.contactSubHeadingWrapper {
+    @include flexColumn;
+    align-items: center;
+
+    .contactPageSubHeading {
+        font-size: $fs_normal_md;
+        max-width: 75ch;
+        text-align: center;
+        text-wrap: pretty;
+
+        @media (max-width: 1024px) {
+            font-size: calc($fs_normal_md * 0.96);
+        }
+
+        @media (max-width: 768px) {
+            font-size: $fs_normal_sm;
+        }
+
+        @media (max-width: 460px) {
+            font-size: $fs_normal_ssm;
+        }
+    }
+}
+
+.contactCardWrapper {
+    align-self: center;
+    max-width: 60%;
+
+    @include flexColumn;
+    align-items: center;
+    gap: 20px;
+    padding: 4.6em;
+
+    border: $base_border;
+    border-radius: $distance_md;
+    transition: border-color 360ms ease-in-out;
+
+    @media (max-width: 1024px) {
+        max-width: none;
+        width: 70%;
+    }
+
+    @media (max-width: 768px) {
+    }
+
+    @media (max-width: 460px) {
+    }
+
+    &:hover {
+        border: $base_border_hover;
+    }
+}
+
+.contactCardImgWrapper {
+    @include flexCenter;
+    max-width: 20%;
+    border-radius: 9999px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        max-width: 24%;
+    }
+
+    @media (max-width: 460px) {
+        max-width: 30%;
+    }
+
+    .contactCardImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: $transition_effect_md;
+
+        &:hover {
+            filter: brightness(1.1);
+        }
+    }
+}
+
+.contactCardTextWrapper {
+    @include flexColumn;
+    align-items: center;
+    gap: clamp(6px, 0.8rem, 10px);
+
+    .contactCardText {
+        font-size: $fs_normal_md;
+        color: $white_text;
+        text-align: center;
+        cursor: default;
+
+        @media (max-width: 1024px) {
+            font-size: calc($fs_normal_md * 0.96);
+        }
+
+        @media (max-width: 768px) {
+            font-size: $fs_normal_sm;
+        }
+
+        @media (max-width: 460px) {
+            font-size: $fs_normal_ssm;
+        }
+    }
+
+    & > *:last-child {
+        color: color-mix(in srgb, $white_text 90%, transparent 50%);
+    }
+}
+
+.contactLinksWrapper {
+    width: 100%;
+    @include flexCenter;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.contactLink {
+    position: relative;
+    @include flexCenter;
+    z-index: 1;
+    padding: 1em 0.6em;
+
+    svg {
+        height: 8rem;
+        aspect-ratio: 1 / 1;
+        filter: brightness(0.6);
+        transition: $transition_effect_md;
+
+        @media (max-width: 1024px) {
+            height: 7rem;
+        }
+
+        @media (max-width: 768px) {
+            height: 5rem;
+        }
+
+        @media (max-width: 460px) {
+            height: 3.6rem;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 2;
+
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        // height: 0;
+        height: 100%;
+        border-top: 2px solid transparent;
+        backdrop-filter: grayscale(1);
+        transition: $transition_effect_md;
+    }
+
+    &.email {
+        &::after {
+            border-color: #ea4435;
+        }
+    }
+    &.github {
+        &::after {
+            border-color: #eee;
+        }
+    }
+    &.linkedin {
+        &::after {
+            border-color: #0a66c2;
+        }
+    }
+
+    &:hover {
+        svg {
+            filter: brightness(1.06);
+        }
+
+        &::after {
+            border-width: 6px;
+            height: 0;
+        }
+    }
+}

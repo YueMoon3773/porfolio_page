@@ -11,6 +11,19 @@
             margin: 0 auto;
             // min-width: 50%;
             width: 60%;
+
+            @media (max-width: 1024px) {
+                width: 76%;
+            }
+
+            @media (max-width: 800px) {
+                width: 86%;
+                padding-bottom: 5.6rem;
+            }
+
+            @media (max-width: 460px) {
+                width: 90%;
+            }
         }
     }
 }
