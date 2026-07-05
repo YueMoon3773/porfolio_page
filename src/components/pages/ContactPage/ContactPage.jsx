@@ -10,9 +10,9 @@ import contactImg from '../../../assets/img/personal/contact_img.jpg';
 import './ContactPage.scss';
 
 const ContactPage = () => {
-    // useEffect(() => {
-    //     window.scrollTo({ top: 0, left: 0 });
-    // });
+    useEffect(() => {
+        document.title = "YueMoon's Portfolio | Contact";
+    }, []);
 
     return (
         <PageLayout pageType={'normalPage'}>

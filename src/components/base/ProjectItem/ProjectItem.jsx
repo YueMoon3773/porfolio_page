@@ -1,5 +1,6 @@
-import React from 'react';
 import { z } from 'zod';
+
+import ValidatedComponent from '../../../utils/validateComponentProps';
 
 import { GitHubIcon } from '../../../assets/svgIcons';
 
@@ -8,6 +9,16 @@ import ImageCarousel from '../ImageCarousel/ImageCarousel';
 import LinkBtnLike from '../LinkBtnLike/LinkBtnLike';
 
 import './ProjectItem.scss';
+
+const projectItemSchema = z.object({
+    projectName: z.string(),
+    projectDescription: z.string(),
+    projectImgs: z.array(z.looseObject({})),
+    projectTechnologies: z.string(),
+    projectSummary: z.string(),
+    projectDemoLink: z.string().url(),
+    projectSrcLink: z.string().url(),
+});
 
 const ProjectItem = ({
     projectName,
@@ -63,4 +74,4 @@ const ProjectItem = ({
     );
 };
 
-export default ProjectItem;
+export default ValidatedComponent(ProjectItem, projectItemSchema);

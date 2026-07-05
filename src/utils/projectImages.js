@@ -31,6 +31,13 @@ import weatherApp01 from '../assets/img/prjs/weather_app/weather_app_01.jpg';
 import weatherApp02 from '../assets/img/prjs/weather_app/weather_app_02.jpg';
 import weatherApp03 from '../assets/img/prjs/weather_app/weather_app_03.jpg';
 
+import todoApp01 from '../assets/img/prjs/toDo/toDo_01.jpg';
+import todoApp02 from '../assets/img/prjs/toDo/toDo_02.jpg';
+import todoApp03 from '../assets/img/prjs/toDo/toDo_03.jpg';
+import todoApp04 from '../assets/img/prjs/toDo/toDo_04.jpg';
+import todoApp05 from '../assets/img/prjs/toDo/toDo_05.jpg';
+import todoApp06 from '../assets/img/prjs/toDo/toDo_06.jpg';
+
 import shopify01 from '../assets/img/prjs/shopify/shopify_01.jpg';
 import shopify02 from '../assets/img/prjs/shopify/shopify_02.jpg';
 import shopify03 from '../assets/img/prjs/shopify/shopify_03.jpg';
@@ -76,6 +83,15 @@ export const weatherAppImages = [
     { id: 0, name: 'weatherApp', src: weatherApp01 },
     { id: 1, name: 'weatherApp', src: weatherApp02 },
     { id: 2, name: 'weatherApp', src: weatherApp03 },
+];
+
+export const toDoAppImages = [
+    { id: 0, name: 'todoApp', src: todoApp01 },
+    { id: 1, name: 'todoApp', src: todoApp02 },
+    { id: 2, name: 'todoApp', src: todoApp03 },
+    { id: 3, name: 'todoApp', src: todoApp04 },
+    { id: 4, name: 'todoApp', src: todoApp05 },
+    { id: 4, name: 'todoApp', src: todoApp05 },
 ];
 
 export const shopifyImages = [

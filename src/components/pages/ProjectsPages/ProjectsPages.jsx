@@ -1,4 +1,4 @@
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import {
     gamioImages,
@@ -6,6 +6,7 @@ import {
     cvifyImages,
     battleShipImages,
     weatherAppImages,
+    toDoAppImages,
     shopifyImages,
 } from '../../../utils/projectImages';
 
@@ -16,6 +17,10 @@ import FadeUpWrapper from '../../layout/FadeUpWrapper/FadeUpWrapper';
 import './ProjectsPages.scss';
 
 const ProjectsPages = () => {
+    useEffect(() => {
+        document.title = "YueMoon's Portfolio | Projects";
+    }, []);
+
     return (
         <PageLayout pageType={'normalPage'}>
             <div className="projectsPageWrapper">
@@ -80,6 +85,16 @@ const ProjectsPages = () => {
                         projectSummary={`The weather app, a sleek, responsive web application that delivers real‑time weather information for any city. Simply type in your location, and you’ll instantly see current conditions, hourly forecasts, and weekly outlooks—all wrapped in a dynamic background and theme that adapt to the sky above.`}
                         projectDemoLink={'https://yuemoon3773.github.io/the_weather_app/'}
                         projectSrcLink={'https://github.com/YueMoon3773/the_weather_app'}
+                    ></ProjectItem>
+
+                    <ProjectItem
+                        projectName={'To do App'}
+                        projectDescription={'Note and to-do application'}
+                        projectImgs={toDoAppImages}
+                        projectTechnologies={'HTML; CSS; JavaScript'}
+                        projectSummary={`To Do App, a modern, user-friendly To‑Do application that helps you organize tasks, projects, and notes. Featuring a colorful header, sidebar navigation, and card‑style entries, this app keeps your daily workflow on track.`}
+                        projectDemoLink={'https://yuemoon3773.github.io/to_do_app/'}
+                        projectSrcLink={'https://github.com/YueMoon3773/to_do_app'}
                     ></ProjectItem>
 
                     <ProjectItem

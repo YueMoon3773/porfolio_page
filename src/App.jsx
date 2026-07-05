@@ -9,7 +9,10 @@ import './App.scss';
 
 const App = () => {
     const [isBtmLinkHover, setIsBtmLinkHover] = useState(false);
-    // const popoverRef = useRef(null);
+
+    useEffect(() => {
+        document.title = "YueMoon's Portfolio | Home";
+    }, []);
 
     return (
         <PageLayout pageType="homePage" sideBarDelayMotion={1.36}>

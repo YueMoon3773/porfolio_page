@@ -1,4 +1,4 @@
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import {
     HtmlIcon,
@@ -26,6 +26,10 @@ import ExternalLinkWithIcon from '../../base/ExternalLinkWithIcon/ExternalLinkWi
 import './ProfilePage.scss';
 
 const ProfilePage = () => {
+    useEffect(() => {
+        document.title = "YueMoon's Portfolio | Profile";
+    }, []);
+
     return (
         <PageLayout pageType="normalPage">
             <div className="profilePageWrapper">
